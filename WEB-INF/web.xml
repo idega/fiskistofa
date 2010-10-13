@@ -1,0 +1,21 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+    <display-name>Idega</display-name>
+	<description>Idega base webapplication</description>
+
+<!-- MODULE:BEGIN org.apache.myfaces 0.0 -->
+<!-- MODULE:END org.apache.myfaces 0.0 -->
+
+<!-- MODULE:BEGIN com.idega.core 0.0 -->
+<!-- MODULE:END com.idega.core 0.0 -->
+
+<!-- MODULE:BEGIN com.idega.faces 0.0 -->
+<!-- MODULE:END com.idega.faces 0.0 -->
+
+<!-- MODULE:BEGIN org.apache.axis 0.0 -->
+<!-- MODULE:END org.apache.axis 0.0 -->
+
+</web-app>

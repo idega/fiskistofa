@@ -1,0 +1,15 @@
+<document xmlns="http://maven.apache.org/changes/1.0.0">
+	<properties>
+		<title>Fiskisotfa Changes</title>
+		<author email="palli@idega.com">Pall Helgason</author>
+	</properties>
+	<body>
+
+       <release version="4.1.3-SNAPSHOT" date="2010-10-13">
+	       <action dev="palli" type="update">
+	       	First version
+	       </action>
+       </release>
+
+	</body>
+</document>
