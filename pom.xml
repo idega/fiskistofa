@@ -248,57 +248,54 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 
   <build>
     <plugins>
-    
-    <plugin>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>buildnumber-maven-plugin</artifactId>
-      <version>1.0-beta-2</version>
-      <configuration>
-            <format>{0,date,yyyyMMdd.HHmmss}</format>
-            <items>
-            <item>timestamp</item>
-            </items>
-        </configuration>
-      <executions>
-        <execution>
-          <phase>validate</phase>
-          <goals>
-            <goal>create</goal>
-          </goals>
-        </execution>
-      </executions>
-    </plugin>
 
-    
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+        <version>1.0-beta-2</version>
+        <configuration>
+          <format>{0,date,yyyyMMdd.HHmmss}</format>
+          <items>
+            <item>timestamp</item>
+          </items>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>create</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+
       <plugin>
         <groupId>com.idega.maven.plugins</groupId>
         <artifactId>com.idega.maven.webapp</artifactId>
         <extensions>true</extensions>
         <configuration>
           <extractResources>true</extractResources>
+          <webResources>
+            <resource>
+              <directory>resources</directory>
+              <targetPath>resources</targetPath>
+            </resource>
+          </webResources>
           <archive>
             <manifest>
+              <!--addClasspath>true</addClasspath-->
               <addExtensions />
             </manifest>
             <manifestEntries>
-                <!--Implementation-Vendor>${pom.organization.name}</Implementation-Vendor-->
-                <Implementation-Vendor-Url>${pom.organization.url}</Implementation-Vendor-Url>
-                <Implementation-Build>${buildNumber}</Implementation-Build>
-                <Implementation-InceptionYear>${pom.inceptionYear}</Implementation-InceptionYear>
+              <!--Implementation-Vendor>${pom.organization.name}</Implementation-Vendor-->
+              <Implementation-Vendor-Url>${pom.organization.url}</Implementation-Vendor-Url>
+              <Implementation-Build>${buildNumber}</Implementation-Build>
+              <Implementation-InceptionYear>${pom.inceptionYear}</Implementation-InceptionYear>
             </manifestEntries>
-          </archive>          
+          </archive>
         </configuration>
       </plugin>
-      <!-- 
-        <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>tomcat-maven-plugin</artifactId>
-        <configuration>
-        <url>http://formbuilder.idega.is/manager</url>
-        <server>formbuilder</server>
-        </configuration>
-        </plugin>
-      -->
     </plugins>
   </build>
 </project>
